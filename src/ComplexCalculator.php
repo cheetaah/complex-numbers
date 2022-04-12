@@ -49,6 +49,10 @@ class ComplexCalculator
     {
         $result = new ComplexNumber;
 
+        if ($operand2->getRealPart() == 0 && $operand2->getImaginaryPart() == 0) {
+            throw new LogicError('Illegal operation: division by zero');
+        }
+
         $realPart      = ($operand1->getRealPart() * $operand2->getRealPart() + $operand1->getImaginaryPart() * $operand2->getImaginaryPart()) /
             ($operand2->getRealPart() * $operand2->getRealPart() + $operand2->getImaginaryPart() * $operand2->getImaginaryPart());
         $imaginaryPart = ($operand2->getRealPart() * $operand1->getImaginaryPart() - $operand1->getRealPart() * $operand2->getImaginaryPart()) /

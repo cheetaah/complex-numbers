@@ -13,7 +13,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Calculator\\": "src/"
+      "Calculator\\": "src/",
+      "Calculator\\Test\\": "tests/"
     }
   }
 }
