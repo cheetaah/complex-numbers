@@ -1,7 +1,10 @@
 <?php
 
-namespace Calculator;
+namespace Calculator\Number;
 
+/**
+ * Interface for complex number
+ */
 interface ComplexNumberInterface
 {
     public function setRealPart(float $realPart): ComplexNumberInterface;

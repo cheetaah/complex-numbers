@@ -1,12 +1,29 @@
 <?php
 
-namespace Calculator;
+namespace Calculator\Number;
 
+
+/**
+ * Class for complex number logic
+ */
 class ComplexNumber implements ComplexNumberInterface
 {
+    /**
+     * @var float|int real part of complex number
+     */
     protected float $realPart;
+
+    /**
+     * @var float|int imaginary part of complex number
+     */
     protected float $imaginaryPart;
 
+    /**
+     * Gets new instance of ComplexNumber
+     *
+     * @param float $realPart
+     * @param float $imaginaryPart
+     */
     public function __construct(float $realPart = 0, float $imaginaryPart = 0)
     {
         $this->realPart      = $realPart;
@@ -14,6 +31,8 @@ class ComplexNumber implements ComplexNumberInterface
     }
 
     /**
+     * Gets real part of complex number
+     *
      * @return float
      */
     public function getRealPart(): float
@@ -22,6 +41,8 @@ class ComplexNumber implements ComplexNumberInterface
     }
 
     /**
+     * Sets real part of complex number and has chain-call effect for calling setters in chain
+     *
      * @param float $realPart
      *
      * @return ComplexNumberInterface
@@ -34,6 +55,8 @@ class ComplexNumber implements ComplexNumberInterface
     }
 
     /**
+     * Gets imaginary part of complex number
+     *
      * @return float
      */
     public function getImaginaryPart(): float
@@ -42,6 +65,8 @@ class ComplexNumber implements ComplexNumberInterface
     }
 
     /**
+     * Sets imaginary part of complex number and has chain-call effect for calling setters in chain
+     *
      * @param float $imaginaryPart
      *
      * @return ComplexNumberInterface
