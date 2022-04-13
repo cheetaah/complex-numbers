@@ -3,8 +3,8 @@
 require_once ( __DIR__ . '/vendor/autoload.php');
 
 use Calculator\ComplexCalculator;
-use Calculator\ComplexNumber;
-use Calculator\OutputComplexNumber;
+use Calculator\Number\ComplexNumber;
+use Calculator\Formatter\OutputComplexNumber;
 
 $complexNumber1 = new ComplexNumber(2, 3);
 $complexNumber2 = new ComplexNumber(1, -4);

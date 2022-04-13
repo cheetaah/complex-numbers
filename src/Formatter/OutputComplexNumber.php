@@ -3,7 +3,8 @@
 namespace Calculator\Formatter;
 
 
-use Calculator\ComplexNumberInterface;
+use Calculator\Error\LogicError;
+use Calculator\Number\ComplexNumberInterface;
 
 /**
  * Formatter number object to string
@@ -40,6 +41,8 @@ class OutputComplexNumber
     {
         if (isset($arguments[0]) && ($arguments[0] instanceof ComplexNumberInterface)) {
             $this->setComplexNumber($arguments[0]);
+        } else {
+            throw new LogicError('Formatter works only with '.ComplexNumberInterface::class.' instances');
         }
         return $this;
     }
