@@ -24,3 +24,11 @@ echo $output($complexNumber1) . ' + ' . $output($complexNumber2) . ' = ' . $outp
 echo $output($complexNumber2) . ' - ' . $output($complexNumber4) . ' = ' . $output($result2) . "\n";
 echo $output($complexNumber3) . ' * ' . $output($complexNumber1) . ' = ' . $output($result3) . "\n";
 echo $output($complexNumber4) . ' / ' . $output($complexNumber3) . ' = ' . $output($result4) . "\n";
+
+/**
+ * TODO:
+ * 1. import formatter parser (instance complex number object from string like "Re + Im i"
+ * 2. improve operands classes
+ * 3. improve operations
+ * 4. upgrade calculator class
+ */
